@@ -83,6 +83,15 @@ include_once __DIR__ . '/../Controller/AppointmentController.php';
             </div>
 
             <table>
+                <tr>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                    <th>Sunday</th>
+                </tr>
                 <?php
 
                 // SHOW CALENDAR
@@ -100,9 +109,9 @@ include_once __DIR__ . '/../Controller/AppointmentController.php';
                         $calendar = $calendarController->getDailyAppointment(($daysRest + 1),$currentMonth,$currentYear);
 
                         if($currentDay == $firstDay){
-                            echo "<td class='currentDay'><p>$firstDay</p><ul>";
+                            echo "<td class='currentDay'><p>".($daysRest + 1)."</p><ul>";
                         }else{
-                            echo "<td><p>".$firstDay."</p><ul>";
+                            echo "<td><p>".($daysRest + 1)."</p><ul>";
                         }
 
                         foreach ($calendar as $appointment){
@@ -164,9 +173,9 @@ include_once __DIR__ . '/../Controller/AppointmentController.php';
                         $calendar = $calendarController->getDailyAppointment($days,$currentMonth,$currentYear);
 
                         if($currentDay == $days){
-                            echo "<td class='currentDay'><p>$firstDay</p><ul>";
+                            echo "<td class='currentDay'><p>$days</p><ul>";
                         }else{
-                            echo "<td><p>$firstDay</p><ul>";
+                            echo "<td><p>$days</p><ul>";
                         }
 
                         foreach ($calendar as $appointment){
