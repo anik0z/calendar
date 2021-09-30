@@ -83,6 +83,7 @@ include_once __DIR__ . '/../Controller/AppointmentController.php';
             </div>
 
             <table>
+                <thead>
                 <tr>
                     <th>Monday</th>
                     <th>Tuesday</th>
@@ -92,6 +93,8 @@ include_once __DIR__ . '/../Controller/AppointmentController.php';
                     <th>Saturday</th>
                     <th>Sunday</th>
                 </tr>
+                </thead>
+                <tbody>
                 <?php
 
                 // SHOW CALENDAR
@@ -230,6 +233,7 @@ include_once __DIR__ . '/../Controller/AppointmentController.php';
                 }
 
                 ?>
+                </tbody>
             </table>
 
             <a class="buttonAdd" href="Appointment/add.php">Add</a>
