@@ -1,0 +1,105 @@
+body{
+    width: 100%;
+    height: 100%;
+    max-width: 1920px;
+    margin: auto;
+    background-image: linear-gradient(90deg,#f15a22 0%,#f27041 100%) !important;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,h6,p,th,tr,a,label,input {
+    font-family: 'Roboto', sans-serif;
+}
+
+body > header{
+    padding: 25px;
+    margin-bottom: 50px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main{
+    background: white;
+    width: 92%;
+    margin: auto;
+    padding: 30px;
+    border-radius: 5%;
+    margin-bottom: 50px;
+}
+
+main > * {
+    margin-bottom: 20px;
+}
+
+main > h4{
+    text-align: center;
+    color: saddlebrown;
+    font-size: 20px;
+}
+
+main > table{
+    width: 100%;
+    height: 100%;
+    background: lightgray;
+}
+
+main td{
+    width: 14.2%;
+    height: 200px;
+    background: white;
+    border: 1px solid;
+}
+
+.buttonAdd{
+    padding: 20px 50px;
+    background: #f15a22;
+    border-radius: 5%;
+    display: inline-block;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+ul > li{
+    list-style-type: none;
+}
+
+.appointment{
+    margin: 20px 5px;
+    padding: 5px;
+    background: darkgrey;
+}
+
+.appointment > div{
+    margin-bottom: 10px;
+}
+
+.appointment > .actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main > .wrap-form {
+    width: 50%;
+    height: 50%;
+    margin:auto;
+    background: white;
+}
+
+.currentDay{
+    background: #f15a22;
+}
+
+.paginationMonth{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
