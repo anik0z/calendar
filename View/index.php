@@ -109,9 +109,9 @@ include_once __DIR__ . '/../Controller/AppointmentController.php';
                         $calendar = $calendarController->getDailyAppointment(($daysRest + 1),$currentMonth,$currentYear);
 
                         if($currentDay == $firstDay){
-                            echo "<td class='currentDay'><p>".($daysRest + 1)."</p><ul>";
+                            echo "<td class='currentDay eventAdd'><p>".($daysRest + 1)."</p><ul>";
                         }else{
-                            echo "<td><p>".($daysRest + 1)."</p><ul>";
+                            echo "<td class='eventAdd'><p>".($daysRest + 1)."</p><ul>";
                         }
 
                         foreach ($calendar as $appointment){
@@ -144,7 +144,7 @@ include_once __DIR__ . '/../Controller/AppointmentController.php';
 
                         echo "</ul>";
 
-                        echo '<form class="form" action="Appointment/add.php" method="post">'.
+                        echo '<form class="form" id="addForm" action="Appointment/add.php" method="post">'.
                                 '<div class="container">'.
                                     '<input type="hidden" name="year" value="'. $currentYear .'">'.
                                     '<input type="hidden" name="month" value="'. $currentMonth .'">'.
@@ -175,9 +175,9 @@ include_once __DIR__ . '/../Controller/AppointmentController.php';
                         $calendar = $calendarController->getDailyAppointment($days,$currentMonth,$currentYear);
 
                         if($currentDay == $days){
-                            echo "<td class='currentDay'><p>$days</p><ul>";
+                            echo "<td class='currentDay eventAdd'><p>$days</p><ul>";
                         }else{
-                            echo "<td><p>$days</p><ul>";
+                            echo "<td class='eventAdd'><p>$days</p><ul>";
                         }
 
                         foreach ($calendar as $appointment){
@@ -209,7 +209,7 @@ include_once __DIR__ . '/../Controller/AppointmentController.php';
 
                         echo "</ul>";
 
-                        echo '<form class="form" action="Appointment/add.php" method="post">'.
+                        echo '<form class="form" id="addForm" action="Appointment/add.php" method="post">'.
                                 '<div class="container">'.
                                     '<input type="hidden" name="year" value="'. $currentYear .'">'.
                                     '<input type="hidden" name="month" value="'. $currentMonth .'">'.
@@ -234,6 +234,8 @@ include_once __DIR__ . '/../Controller/AppointmentController.php';
 
             <a class="buttonAdd" href="Appointment/add.php">Add</a>
         </main>
+
+        <script src="js/main.js"></script>
         </body>
         </html>
 
