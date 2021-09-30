@@ -52,8 +52,24 @@ main td{
     width: 14.2%;
     height: 200px;
     background: white;
+    position: relative;
     border: 1px solid;
 }
+
+
+main td > p{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+}
+
+main td > form{
+    text-align: center;
+}
+
 
 .buttonAdd{
     padding: 20px 50px;
@@ -65,11 +81,15 @@ main td{
 ul{
     margin: 0;
     padding: 0;
+    position: relative;
+    height: 100%;
+    overflow: auto;
 }
 
 ul > li{
     list-style-type: none;
 }
+
 
 .appointment{
     margin: 20px 5px;

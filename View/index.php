@@ -142,6 +142,8 @@ include_once __DIR__ . '/../Controller/AppointmentController.php';
                                 '</li>';
                         }
 
+                        echo "</ul>";
+
                         echo '<form class="form" action="Appointment/add.php" method="post">'.
                                 '<div class="container">'.
                                     '<input type="hidden" name="year" value="'. $currentYear .'">'.
@@ -151,7 +153,7 @@ include_once __DIR__ . '/../Controller/AppointmentController.php';
                                 '</div>'.
                             '</form>';
 
-                        echo "</ul></td>";
+                        echo "</td>";
 
                         $daysRest++;
                     }
@@ -205,6 +207,8 @@ include_once __DIR__ . '/../Controller/AppointmentController.php';
                                 '</li>';
                         }
 
+                        echo "</ul>";
+
                         echo '<form class="form" action="Appointment/add.php" method="post">'.
                                 '<div class="container">'.
                                     '<input type="hidden" name="year" value="'. $currentYear .'">'.
@@ -214,19 +218,15 @@ include_once __DIR__ . '/../Controller/AppointmentController.php';
                                 '</div>'.
                             '</form>';
 
-                        echo "</ul></td>";
+                        echo "</td>";
 
                         $days++;
                         $j++;
                     }
                     $i += $j;
 
-                    /* 34 because is the maximun size of the matrix */
-                    if($i + $jumpDays < 34){
-                        echo "</tr>";
-                    }else{
-                        //var_dump($i + $jumpDays);
-                    }
+                    echo "</tr>";
+
                 }
 
                 ?>
